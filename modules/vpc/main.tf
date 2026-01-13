@@ -61,6 +61,17 @@
     subnet_id      = aws_subnet.public.id
     route_table_id = aws_route_table.public.id
   }
+
+  # 두 번째 프라이빗 서브넷 (RDS용 - 다른 AZ)
+  resource "aws_subnet" "private_2" {
+    vpc_id            = aws_vpc.main.id
+    cidr_block        = var.private_subnet_cidr_2
+    availability_zone = var.availability_zone_2
+
+    tags = {
+      Name = "${var.project_name}-${var.environment}-private-subnet-2"
+    }
+  }
 /*
  핵심 개념:
   - resource "타입" "이름" = AWS 리소스 생성

@@ -14,7 +14,7 @@ resource "aws_db_instance" "main" {
 
   # 엔진 설정
   engine               = "postgres"
-  engine_version       = "15.4"
+  engine_version       = "15"
   instance_class       = "db.t3.micro"
 
   # 스토리지 설정

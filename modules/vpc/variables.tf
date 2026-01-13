@@ -40,3 +40,15 @@
     type        = string
     default     = "ap-northeast-2a"
   }
+
+  variable "availability_zone_2" {
+    description = "두 번째 가용영역"
+    type        = string
+    default     = "ap-northeast-2c"
+  }
+
+  variable "private_subnet_cidr_2" {
+    description = "두 번째 프라이빗 서브넷 CIDR"
+    type        = string
+    default     = "10.0.20.0/24"
+  }
